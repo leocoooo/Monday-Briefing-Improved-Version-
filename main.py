@@ -9,7 +9,7 @@ from monday_report.api import (
     endpoints_briefing,
     endpoints_config,
     endpoints_health,
-    endpoints_test 
+    # endpoints_test 
 )
 
 
@@ -35,7 +35,7 @@ app = FastAPI(
 app.include_router(endpoints_briefing.router)
 app.include_router(endpoints_config.router)
 app.include_router(endpoints_health.router)
-app.include_router(endpoints_test.router)
+# app.include_router(endpoints_test.router)
 
 
 # --- Point d'entrée principal (pour exécution directe) ---
