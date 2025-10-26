@@ -12,7 +12,7 @@ class BriefingService:
         now = datetime.now(tz)
         generated_at = now.strftime('%A %d %B %Y à %H:%M').capitalize()
 
-        psg_matches = await FootballService.get_next_psg_matches(2)
+        team_matches = await FootballService.get_next_team_matches(2)
         weather_days = await WeatherService.get_week_weather()
         random_city = await GeoService.get_random_french_city()
 
@@ -22,9 +22,9 @@ class BriefingService:
             f"Généré le {generated_at}",
             "═" * 60,
             "",
-            "⚽ PROCHAINS MATCHS DU PSG",
+            f"⚽ PROCHAINS MATCHS DE {settings.team_name.upper()}",
             "─" * 60,
-            *psg_matches,
+            *team_matches,
             "",
             "🌤️ MÉTÉO (7 JOURS)",
             "─" * 60,
