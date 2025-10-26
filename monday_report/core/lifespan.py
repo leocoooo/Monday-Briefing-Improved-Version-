@@ -4,7 +4,7 @@ from monday_report.services.briefing_service import BriefingService
 from monday_report.services.email_service import EmailService
 
 async def scheduled_monday_job():
-    print("⏰ Lancement du briefing hebdomadaire...")
+    print("Lancement du briefing hebdomadaire...")
     report = await BriefingService.build_report()
     result = EmailService.send_email("Briefing Hebdomadaire", report)
     print("Envoi effectué :", result)
@@ -21,7 +21,7 @@ async def lifespan(app):
         id='monday_briefing'
     )
     scheduler.start()
-    print(f"✅ Scheduler démarré ({scheduler.timezone})")
+    print(f"Scheduler démarré ({scheduler.timezone})")
     yield
     scheduler.shutdown()
-    print("🛑 Scheduler arrêté")
+    print("Scheduler arrêté")

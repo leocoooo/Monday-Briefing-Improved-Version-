@@ -8,17 +8,17 @@ class Settings(BaseSettings):
         extra='ignore'
     )
 
-    # --- Core parameters ---
+    # Core parameters
     latitude: float = 48.8566
     longitude: float = 2.3522
     timezone: str = "Europe/Paris"
 
-    # --- Football ---
+    # Football
     football_data_api_key: Optional[str] = None
     team_id: int = 524
     team_name: str = "Paris Saint-Germain"
 
-    # --- Email ---
+    # Email 
     smtp_host: Optional[str] = None
     smtp_port: int = 587
     smtp_user: Optional[str] = None
