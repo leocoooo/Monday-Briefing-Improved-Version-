@@ -1,6 +1,59 @@
+# Variables d'environnement et secrets
 .env
+*.env
+!.env.example
+
+# Environnements virtuels Python
 .venv
+venv/
+env/
+ENV/
+
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Cache et outils
 .ruff_cache/
 .mypy_cache/
+.pytest_cache/
 .old/
+
+# AWS SAM
+.aws-sam/
+samconfig.toml
+
+# AWS credentials (sécurité)
+.aws/
+credentials
+config
+
+# Fichiers temporaires
+*.log
+*.tmp
+secret.json
+keys.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
