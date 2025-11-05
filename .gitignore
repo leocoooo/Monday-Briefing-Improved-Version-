@@ -58,5 +58,5 @@ desktop.ini
 *.bak
 *.backup
 
-
+# fichiers à but pédagogique
 docs/ 
