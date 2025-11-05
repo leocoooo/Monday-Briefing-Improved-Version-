@@ -12,7 +12,7 @@ API FastAPI déployée sur AWS Lambda pour la génération et l'envoi automatiqu
 ## 📋 Description
 
 Cette API génère automatiquement un briefing hebdomadaire contenant :
-- 🌤️ **Météo** : Prévisions sur 7 jours pour votre localisation
+- 🌤️ **Météo** : Prévisions sur 7 jours selon la localisation renseignée
 - 🏃 **Jours optimaux pour courir** : Sélection automatique basée sur la météo
 - ⚽ **Matchs de football** : Les 2 prochains matchs de votre équipe favorite
 - 🏙️ **Ville aléatoire** : Découverte d'une commune française avec sa population
@@ -160,7 +160,7 @@ sam deploy --guided
 ### **6. Configuration du scheduler**
 L'envoi automatique est configuré pour **tous les lundis à 8h (heure de Paris)**.
 
-Pour modifier l'horaire, édite `template.yaml` :
+Pour modifier l'horaire, éditer `template.yaml` :
 ```yaml
 Schedule: 'cron(0 7 ? * MON *)'  # Lundi 8h Paris = 7h UTC
 ```
