@@ -57,3 +57,6 @@ desktop.ini
 # Fichiers de sauvegarde
 *.bak
 *.backup
+
+
+docs/ 
