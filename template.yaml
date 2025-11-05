@@ -47,8 +47,8 @@ Resources:
         MondaySchedule:
           Type: Schedule
           Properties:
-            #Schedule: 'cron(0 7 ? * MON *)' # tous les lundis à 7h UTC = 8h Paris
-            Schedule: 'cron(0 7 ? * * *)'
+            Schedule: 'cron(0 7 ? * MON *)' # tous les lundis à 7h UTC = 8h Paris
+            # Schedule: 'cron(0 7 ? * * *)' #tous les jours à 7h UTC = 8h Paris
             Description: "Envoi automatique du briefing tous les lundis à 8h (heure Paris = 7h UTC)"
             Enabled: true
             Input: '{"source": "eventbridge", "action": "send_briefing"}'
