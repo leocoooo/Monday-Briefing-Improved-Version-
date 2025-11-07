@@ -18,8 +18,8 @@ Globals:
         TEAM_ID: "524"
         TEAM_NAME: "Paris Saint-Germain"
         
-        # Les secrets (SMTP, API keys) sont maintenant dans Secrets Manager
-        # Ils seront chargés automatiquement par le code depuis monday-briefing/prod/config
+        # Les secrets (SMTP, API keys) sont dans Secrets Manager
+        # Ils sont chargés automatiquement par le code depuis monday-briefing/prod/config
 
 Resources:
   MondayBriefingFunction:
@@ -48,7 +48,7 @@ Resources:
           Type: Schedule
           Properties:
             Schedule: 'cron(0 7 ? * MON *)' # tous les lundis à 7h UTC = 8h Paris
-            # Schedule: 'cron(0 7 ? * * *)' #tous les jours à 7h UTC = 8h Paris
+            # Schedule: 'cron(0 7 ? * * *)' # tous les jours à 7h UTC = 8h Paris
             Description: "Envoi automatique du briefing tous les lundis à 8h (heure Paris = 7h UTC)"
             Enabled: true
             Input: '{"source": "eventbridge", "action": "send_briefing"}'

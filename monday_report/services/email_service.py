@@ -17,7 +17,7 @@ class EmailService:
                 print(f"❌ Erreur écriture fichier : {e}")
                 return {"status": "print", "body": body}
 
-        # ⚡ mypy est maintenant rassuré grâce à assert
+        # pour éviter les erreurs mypy 
         assert settings.smtp_host is not None
         assert settings.smtp_user is not None
         assert settings.smtp_password is not None
