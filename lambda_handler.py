@@ -15,7 +15,7 @@ async def send_briefing():
     from monday_report.services.email_service import EmailService
     
     report = await BriefingService.build_report()
-    await EmailService.send_email("Briefing Hebdomadaire", report)
+    EmailService.send_email("Briefing Hebdomadaire", report)
     return {"status": "success", "message": "Briefing envoyé"}
 
 
