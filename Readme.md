@@ -23,7 +23,7 @@ Le briefing est **envoyé automatiquement par email tous les lundis à 8h** via 
 
 ## 🚀 Fonctionnalités
 
-### **API REST complète**
+### **API REST **
 - ✅ Endpoints individuels pour chaque composant du briefing
 - ✅ Documentation interactive Swagger UI (`/docs`)
 - ✅ Documentation ReDoc (`/redoc`)
